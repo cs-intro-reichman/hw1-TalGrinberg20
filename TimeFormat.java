@@ -18,9 +18,13 @@ public class TimeFormat {
 			else {
 				suffix = "PM";
 			}
-		/*if (minutes < 10){
-			System.out.printf("%02d", minutes);
-		}*/
-System.out.println(Integer.toString(hours) + ":" + String.format("%02d", minutes) + " " + suffix);
+		if (minutes < 10){
+			String littleMinutes = '0' + Integer.toString(minutes);
+			System.out.println(Integer.toString(hours) + ":" + littleMinutes + " " + suffix);
+
+		}
+		else {
+			System.out.println(Integer.toString(hours) + ":" + minutes + " " + suffix);
+		}
 	}
 }
